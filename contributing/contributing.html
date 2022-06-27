@@ -3,14 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="How to use JPlag" href="howto/howto.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="How to use JPlag" href="../howto/howto.html" />
 
     <meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
-        <title>JPlag 4.0.0-SNAPSHOT documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    <link rel="stylesheet" type="text/css" href="_static/css/bg.css" />
+        <title>Contributing to JPlag - JPlag 4.0.0-SNAPSHOT documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bg.css" />
     
     
 
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">JPlag 4.0.0-SNAPSHOT documentation</div></a>
+      <a href="../index.html"><div class="brand">JPlag 4.0.0-SNAPSHOT documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -144,23 +144,23 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
   
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="_static/logo-dark.png" alt="Logo"/>
+    <img class="sidebar-logo" src="../_static/logo-dark.png" alt="Logo"/>
   </div>
   
   <span class="sidebar-brand-text">JPlag 4.0.0-SNAPSHOT documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1"><a class="reference internal" href="howto/howto.html">How to use JPlag</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing/contributing.html">Contributing to JPlag</a></li>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../howto/howto.html">How to use JPlag</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Contributing to JPlag</a></li>
 </ul>
 
 </div>
@@ -194,79 +194,42 @@
           </label>
         </div>
         <article role="main">
-          <section id="jplag-detecting-software-plagiarism">
-<h1>JPlag - Detecting Software Plagiarism<a class="headerlink" href="#jplag-detecting-software-plagiarism" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<section id="what-is-jplag">
-<h2>What is JPlag<a class="headerlink" href="#what-is-jplag" title="Permalink to this heading">#</a></h2>
-<p>JPlag is a system that finds similarities among multiple sets of source code files. This way it can detect software plagiarism and collusion in software development. JPlag does not merely compare bytes of text but is aware of programming language syntax and program structure and hence is robust against many kinds of attempts to disguise similarities between plagiarized files. JPlag currently supports Java, C#, C, C++, Python 3, Scheme, and natural language text.</p>
-<p>JPlag is typically used to detect and thus discourage the unallowed copying of student exercise programs in programming education. But in principle, it can also be used to detect stolen software parts among large amounts of source text or modules that have been duplicated (and only slightly modified). JPlag has already played a part in several intellectual property cases where it has been successfully used by expert witnesses.</p>
-<p><strong>Just to make it clear:</strong> JPlag does not compare to the internet! It is designed to find similarities among the student solutions, which is usually sufficient for computer programs.</p>
-<figure class="align-default" id="id1">
-<p class="plantuml">
-<img src="_images/plantuml-dcad2d6384aed4a79b94b751493c3d068336416b.svg" alt="interface &quot;front\nend&quot; as ifrontend
-interface jPlag as ijplag
-interface utils as ifeutils
-
-component JPlag as jplag
-component CLI as cli
-
-component &quot;Java Frontend&quot; as java
-component &quot;[More Frontends]&quot; as morefrontends
-
-component &quot;Utils 4 Frontend&quot; as feutils
-
-
-ijplag -right- jplag
-ifeutils -- feutils
-ifrontend -- java
-ifrontend -- morefrontends
-
-java -right-( ifeutils
-morefrontends -left-( ifeutils
-jplag -right-( ifrontend
-cli -right-( ijplag"/></p>
-<figcaption>
-<p><span class="caption-text">JPlag Architecture (WIP)</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="history">
-<h2>History<a class="headerlink" href="#history" title="Permalink to this heading">#</a></h2>
-<p>Originally, JPlag was developed in 1996 by Guido Mahlpohl and others at the chair of Prof. Walter Tichy at Karlsruhe Institute of Technology (KIT). It was first documented in a <a class="reference external" href="https://publikationen.bibliothek.kit.edu/542000">Tech Report</a> in 2002 and later more formally in the <a class="reference external" href="http://www.ipd.kit.edu/tichy/uploads/publikationen/16/finding_plagiarisms_among_a_set_of_progr_638847.pdf">Journal of Universal Computer Science</a>. Since 2015 JPlag is hosted here on GitHub. After 25 years of its creation, JPlag is still used frequently in many universities in different countries around the world.</p>
-</section>
-<section id="download-jplag">
-<h2>Download JPlag<a class="headerlink" href="#download-jplag" title="Permalink to this heading">#</a></h2>
-<p>Download the latest version of JPlag <a class="reference external" href="https://github.com/jplag/jplag/releases">here</a>. If you encounter bugs or other issues, please report them <a class="reference external" href="https://github.com/jplag/jplag/issues">here</a>.</p>
-</section>
-<section id="include-jplag-as-a-dependency">
-<h2>Include JPlag as a Dependency<a class="headerlink" href="#include-jplag-as-a-dependency" title="Permalink to this heading">#</a></h2>
-<p>JPlag is released on <a class="reference external" href="https://search.maven.org/search?q=de.jplag">Maven Central</a>, it can be included as follows:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
-  <span class="nt">&lt;groupId&gt;</span>de.jplag<span class="nt">&lt;/groupId&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>jplag<span class="nt">&lt;/artifactId&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</pre></div>
-</div>
-</section>
-<section id="jplag-legacy-version">
-<h2>JPlag legacy version<a class="headerlink" href="#jplag-legacy-version" title="Permalink to this heading">#</a></h2>
-<p>In case you depend on the legacy version of JPlag we refer to the <a class="reference external" href="https://github.com/jplag/jplag/releases/tag/v2.12.1-SNAPSHOT">legacy release v2.12.1</a> and the <a class="reference external" href="https://github.com/jplag/jplag/tree/legacy">legacy branch</a>. Note that the legacy CLI usage is slightly different.</p>
-<p>The following features are only available in version v3.0.0 and onwards:</p>
+          <section id="contributing-to-jplag">
+<h1>Contributing to JPlag<a class="headerlink" href="#contributing-to-jplag" title="Permalink to this heading">#</a></h1>
+<p>We’re happy to incorporate all improvements to JPlag into this codebase. Feel free to fork the project and send pull requests. If you are new to JPlag, maybe check the <a class="reference external" href="https://github.com/jplag/jplag/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a>.</p>
+<p>Please try to make well-documented and clear structured submissions:</p>
 <ul class="simple">
-<li><p>a Java API for third-party integration</p></li>
-<li><p>a simplified command-line interface</p></li>
-<li><p>support for Java files containing new language features</p></li>
-<li><p>improved colors for source codes matches in the report</p></li>
-<li><p>a parallel comparison mode</p></li>
+<li><p>All artifacts (code, comments…) should be in English</p></li>
+<li><p>Please avoid abbreviations!</p></li>
+<li><p>Make use of JavaDoc to document classes and public methods</p></li>
+<li><dl class="simple">
+<dt>We provide a <a class="reference external" href="https://github.com/jplag/JPlag/blob/master/formatter.xml">formatter configuration</a>, which is enforced by spotless</dt><dd><ul>
+<li><p>Eclipse/IntelliJ users can use it directly</p></li>
+<li><p>It can always be applied via maven with <cite>mvn spotless:apply</cite></p></li>
 </ul>
-<p>The following features are currently only supported in the legacy version but will be eventually restored:</p>
-<ul class="simple">
-<li><p>Result clustering</p></li>
-<li><p>Comparison based on maximum similarity</p></li>
+</dd>
+</dl>
+</li>
+<li><p>Use well-explained pull requests to propose your features</p></li>
+<li><p>When re-using code from other projects mark them accordingly and make sure their license allows the re-use</p></li>
+<li><p>Your changes should always improve the code quality of the codebase, especially when working on older components</p></li>
+<li><p>Your git messages should be concise but more importantly descriptive</p></li>
 </ul>
-<div class="toctree-wrapper compound">
+<section id="building-from-sources">
+<h2>Building from sources<a class="headerlink" href="#building-from-sources" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Download or clone the code from this repository.</p></li>
+<li><p>Run <cite>mvn clean package</cite> from the root of the repository to compile and build all submodules.</p></li>
+<li><p>Run <cite>mvn clean package assembly:single</cite> instead if you need the full jar which includes all dependencies.</p></li>
+<li><p>You will find the generated JARs in the subdirectory <cite>jplag/target</cite>.</p></li>
+</ol>
+</section>
+<section id="adding-new-languages">
+<h2>Adding new languages<a class="headerlink" href="#adding-new-languages" title="Permalink to this heading">#</a></h2>
+<p>Adding a new language frontend is quite simple. Have a look at one of the <cite>jplag.frontend</cite> projects. All you need is a parser for the language (e.g., for ANTLR or for JavaCC) and a few lines of code that send the tokens (that are generated by the parser) to JPlag.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>TODO More Documentation</p>
 </div>
 </section>
 </section>
@@ -276,16 +239,18 @@ cli -right-( ijplag"/></p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="howto/howto.html">
+          
+          <a class="prev-page" href="../howto/howto.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
-                  <span>Next</span>
+                  <span>Previous</span>
                 </div>
+                
                 <div class="title">How to use JPlag</div>
+                
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -323,12 +288,9 @@ cli -right-( ijplag"/></p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">JPlag - Detecting Software Plagiarism</a><ul>
-<li><a class="reference internal" href="#what-is-jplag">What is JPlag</a></li>
-<li><a class="reference internal" href="#history">History</a></li>
-<li><a class="reference internal" href="#download-jplag">Download JPlag</a></li>
-<li><a class="reference internal" href="#include-jplag-as-a-dependency">Include JPlag as a Dependency</a></li>
-<li><a class="reference internal" href="#jplag-legacy-version">JPlag legacy version</a></li>
+<li><a class="reference internal" href="#">Contributing to JPlag</a><ul>
+<li><a class="reference internal" href="#building-from-sources">Building from sources</a></li>
+<li><a class="reference internal" href="#adding-new-languages">Adding new languages</a></li>
 </ul>
 </li>
 </ul>
@@ -340,11 +302,11 @@ cli -right-( ijplag"/></p>
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>
