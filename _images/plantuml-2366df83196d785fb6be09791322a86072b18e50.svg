@@ -12,7 +12,7 @@ link JPlagResult to SubmissionSet--><g id="link_JPlagResult_SubmissionSet"><path
 link JPlagResult to JPlagComparison--><g id="link_JPlagResult_JPlagComparison"><path codeLine="30" d="M220.09,116.94 C185.05,150.37 136.54,196.65 106.23,225.57 " fill="none" id="JPlagResult-to-JPlagComparison" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="102.26,229.36,111.5355,226.0487,105.8803,225.9114,106.0177,220.2562,102.26,229.36" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="85.9141" y="218.6643">0..*</text></g><!--MD5=[e049302016d6b6c89b2b2e485f03e0a2]
 link SubmissionSet to Submission--><g id="link_SubmissionSet_Submission"><path codeLine="31" d="M421.1,277.62 C395.97,299.22 357.52,332.27 324.83,360.36 " fill="none" id="SubmissionSet-to-Submission" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="320.88,363.76,330.3165,360.9399,324.6763,360.506,325.1101,354.8659,320.88,363.76" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="307.6131" y="353.0316">0..*</text></g><!--MD5=[cdee21aae62b171ea7623fd947f07392]
 link JPlagComparison to Submission--><g id="link_JPlagComparison_Submission"><path codeLine="32" d="M104.9,277.62 C130.03,299.22 168.48,332.27 201.17,360.36 " fill="none" id="JPlagComparison-to-Submission" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="205.12,363.76,200.8899,354.8659,201.3237,360.506,195.6835,360.9399,205.12,363.76" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="189.4884" y="353.0316">2</text></g><!--MD5=[496db328a249affadd8f28a57307dfd3]
-link JPlagComparison to Match--><g id="link_JPlagComparison_Match"><path codeLine="33" d="M149.24,253.5 C159.04,253.5 168.83,253.5 178.62,253.5 " fill="none" id="JPlagComparison-to-Match" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="183.74,253.5,174.74,249.5,178.74,253.5,174.74,257.5,183.74,253.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="156.0169" y="250.3543">0..*</text></g><!--MD5=[44d22a18361790bf391b8c169640bea9]
+link JPlagComparison to Match--><g id="link_JPlagComparison_Match"><path codeLine="33" d="M149.24,253.5 C159.04,253.5 168.83,253.5 178.62,253.5 " fill="none" id="JPlagComparison-to-Match" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="183.74,253.5,174.74,249.5,178.74,253.5,174.74,257.5,183.74,253.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="156.0169" y="250.3543">0..*</text></g><!--MD5=[bb092cfe96a6b7b26362245d817100f0]
 @startuml
 class JPlagResult {
   getDuration() : long
@@ -55,5 +55,5 @@ Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
 Default Encoding: UTF-8
 Language: en
-Country: GB
+Country: US
 --></g></svg>

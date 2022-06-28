@@ -33,7 +33,7 @@ The following arguments can be used to control JPlag:
       -c                     {normal,parallel} Comparison mode used to compare the programs (Standard: normal)
 
 
-*Note that the `legacy CLI <https://github.com/jplag/jplag/blob/legacy/README.md>`__ is varying slightly.*
+*Note that the* `legacy CLI <https://github.com/jplag/jplag/blob/legacy/README.md>`__ *is varying slightly.*
 
 Using JPlag programmatically
 ----------------------------
